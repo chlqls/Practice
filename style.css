@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+a {
+  color:black;
+  text-decoration: none; /* none: 밑줄 없음 */
+}
+h1 {
+  font-size:45px;
+  text-align: center; /* 가운데 정렬 */
+  border-bottom: 1px solid gray; /* border, margin, padding -> 박스 모델 */
+  margin: 0;
+  padding: 20px;
+}
+ol {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+}
+#grid {       /* 같은 id 값은 중복 사용 불가 */
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+#grid ol {      /* id가 grid인 태그 안에 있는 ol 태그 */
+  padding-left: 33px;
+}
+#grid #article {
+  padding-left: 25px;
+}
+@media(max-width: 800px) {      /* screen width < 800px 일 때 이렇게 바뀜 */
+  #grid {
+    display: block;
+}
+  ol {
+    border-right: none;
+  }
+  h1 {
+    border-bottom: none;
+  }
+}
+
+/* [용어 정리]
+a {                  a-> selector, 선택자
+  color:black;       color:black-> declaration, 효과, 선언 / color-> property, 속성 / red-> property value
+}
+*/
+
+/* [우선순위]
+id 선택자(#) > class 선택자(.) > 태그 선택
+**선택자 유형이 같다면 가장 마지막 선택자가 우선순위 가장 높음
+ */
