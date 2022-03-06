@@ -28,6 +28,16 @@ body {
   font-family: 'Roboto';
 }
 
+ul {
+  list-style: none;
+}
+
+button, button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 /*header*/
 header {
   display: flex;
@@ -47,4 +57,55 @@ header .logo i {
 
 header .icons .fa-search {
   margin-right: var(--padding);
+}
+
+/* Video Player*/
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* Video Info */
+.info {
+  padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.info .metadata  .hashtags li {
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+  display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-medium);
+  display: -webkit-box; /* 97~103줄 구글링*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+}
+
+.info.views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
 }
