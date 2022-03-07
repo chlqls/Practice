@@ -94,7 +94,7 @@ header .icons .fa-search {
 
 .info .metadata .titleAndButton .title {
   font-size: var(--font-medium);
-  display: -webkit-box; /* 97~103줄 구글링*/
+  display: -webkit-box; /* 97~101줄 구글링*/
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
@@ -108,4 +108,28 @@ header .icons .fa-search {
 .info.views {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
+}
+
+/* Action Buttons -> 뒷배경이 회색으로 나오는거 처리하기!!! */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+
+.actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.actions button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+}
+
+.actions button i.active {
+  color: var(--blue-color);
 }
