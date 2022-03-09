@@ -74,7 +74,7 @@ header .icons .fa-search {
 }
 
 /* Video Info */
-.info {
+body >.info {
   padding: var(--padding);
 }
 
@@ -105,31 +105,142 @@ header .icons .fa-search {
   height: 100%;
 }
 
-.info.views {
+.info .views {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
-/* Action Buttons -> 뒷배경이 회색으로 나오는거 처리하기!!! */
-.actions {
+/* Action Buttons */
+.info .actions {
   display: flex;
   justify-content: space-around;
   margin: var(--padding) 0;
 }
 
-.actions button {
+.info .actions button {
   display: flex;
   flex-direction: column;
   font-size: var(--font-small);
   color: var(--grey-dark-color);
+  background-color: var(--white-color);
 }
 
-.actions button i {
+.info .actions button i {
   margin: 0 auto;
   margin-bottom: calc(var(--padding) / 2);
   font-size: 16px;
 }
 
-.actions button i.active {
+.info .actions button i.active {
   color: var(--blue-color);
 }
+
+/* Channel Description*/
+.info .channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel .metadata .info .name {
+  font-size: var(--font-small);
+}
+
+.channel .metadata .info .subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+  background-color: var(--white-color);
+}
+
+/* Up Next */
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext >.title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.upNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.upNext .item .img img {
+  width: 100%;
+}
+
+.upNext .item .info {
+  flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+  height: 100%
+  flex: 1 1 5%;
+  background-color: var(--white-color);
+}
+
+.upNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .item .info .title {
+  font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
+}
+
+
+
+
+
+
+
+/* 영상 제목 왼쪽 위쪽 간격 넣기 */
